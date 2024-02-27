@@ -1,0 +1,8 @@
+Data preprocessing
+-Framing
+-Windowing
+-Noise and silence removing
+-Fourier Transform
+-Wavelet transform
+-Data augmentation
+-Cross-speaker histogram equalisation
