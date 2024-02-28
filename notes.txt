@@ -4,3 +4,18 @@ Data preprocessing
 -Noise and silence removing
 -Fourier Transform
 -Wavelet transform
+
+Fourier transformed frames used for feature extraxtion of features:
+-Spectral Centroid
+-Spectral Roll-off
+-Spectral flux
+-MFCCs
+
+DWT-Transformed Audio
+1.Wavelet Decomposition
+Breaking audio into series of wavelet coefficients at different scales and time positions
+2.Feature Extraction
+-Wavelet Energy
+-Wavelet Entropy
+-Zero crossing Rate
+

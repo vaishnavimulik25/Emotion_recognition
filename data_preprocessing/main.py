@@ -1,14 +1,16 @@
 from step1 import *
 from step2 import *
-from step3 import *
 import soundfile as sf
 
 # Function to preprocess a single audio file
 def preprocess_audio_file(file_path):
     audio, sr = load_audio_file(file_path)
+    #making frames from audio
     frames = apply_framing_windowing(audio, sr)
     denoised_audio = remove_noise_silence(audio)
+    #makes the frames smoothen
     stft = apply_fourier_transform(frames)
+    #decomposes the signal into both time and frequency components 
     wavelet_transformed_audio = dwt_transform(audio)
     return denoised_audio, stft, wavelet_transformed_audio
 
@@ -41,7 +43,7 @@ def preprocess_dataset(dataset_dir, output_dir):
 
 def main():
     dataset_dir = "./archive/Actor_01"
-    output_dir = "./preprocessed_data"
+    output_dir = "./preprocessed_data/Actor_01"
     preprocess_dataset(dataset_dir, output_dir)
 
 if __name__ == "__main__":
