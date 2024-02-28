@@ -4,5 +4,3 @@ Data preprocessing
 -Noise and silence removing
 -Fourier Transform
 -Wavelet transform
--Data augmentation
--Cross-speaker histogram equalisation
