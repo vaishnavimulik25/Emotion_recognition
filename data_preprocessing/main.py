@@ -92,15 +92,10 @@ def load_features_from_dir(features_dir):
     return features
 
 def main():
-<<<<<<< HEAD
     # print(os.getcwd())
     # return
     dataset_dir = "./RAVDESS/Actor_01"
     output_dir = "./preprocessed_data"
-=======
-    dataset_dir = "./archive/Actor_01"
-    output_dir = "./preprocessed_data/Actor_01"
->>>>>>> d7b4f2461b72cd7d09c9da8b82036c1fa2215423
     preprocess_dataset(dataset_dir, output_dir)
     dataset_dir1 = "./preprocessed_data"
     output_dir1 = "./extracted_features/Actor_01"
