@@ -8,9 +8,12 @@ import librosa
 # Function to preprocess a single audio file
 def preprocess_audio_file(file_path):
     audio, sr = load_audio_file(file_path)
+    #making frames from audio
     frames = apply_framing_windowing(audio, sr)
     denoised_audio = remove_noise_silence(audio)
+    #makes the frames smoothen
     stft = apply_fourier_transform(frames)
+    #decomposes the signal into both time and frequency components 
     wavelet_transformed_audio = dwt_transform(audio)
     return denoised_audio, stft, wavelet_transformed_audio
 
@@ -89,10 +92,15 @@ def load_features_from_dir(features_dir):
     return features
 
 def main():
+<<<<<<< HEAD
     # print(os.getcwd())
     # return
     dataset_dir = "./RAVDESS/Actor_01"
     output_dir = "./preprocessed_data"
+=======
+    dataset_dir = "./archive/Actor_01"
+    output_dir = "./preprocessed_data/Actor_01"
+>>>>>>> d7b4f2461b72cd7d09c9da8b82036c1fa2215423
     preprocess_dataset(dataset_dir, output_dir)
     dataset_dir1 = "./preprocessed_data"
     output_dir1 = "./extracted_features/Actor_01"
